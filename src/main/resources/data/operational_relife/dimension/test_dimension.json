@@ -1,0 +1,40 @@
+{
+  "type": "minecraft:overworld",
+  "generator": {
+    "biome_source": {
+      "biomes": [
+        {
+          "parameters": {
+            "erosion": [
+              -0.7799,
+              -0.375
+            ],
+            "depth": 0.0,
+            "weirdness": [
+              -1.0,
+              -0.9333
+            ],
+            "offset": 0.0,
+            "temperature": [
+              -0.45,
+              -0.15
+            ],
+            "humidity": [
+              -1.0,
+              -0.35
+            ],
+            "continentalness": [
+              -0.11,
+              0.3
+            ]
+          },
+          "biome": "operational_relife:test_biome"
+        }
+      ],
+      "type": "minecraft:multi_noise"
+    },
+    "seed": 0,
+    "settings": "minecraft:overworld",
+    "type": "minecraft:noise"
+  }
+}
