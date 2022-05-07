@@ -1,4 +1,4 @@
-package com.github.ianiiaannn.operationalrelife.Entity;
+package com.github.ianiiaannn.operationrelife.entities;
 /*
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;

@@ -1,4 +1,4 @@
-package com.github.ianiiaannn.operationalrelife;
+package com.github.ianiiaannn.operationrelife;
 
 import net.minecraftforge.common.ForgeConfigSpec;
 
@@ -12,7 +12,7 @@ public final class Config {
   public static final ForgeConfigSpec.ConfigValue<Float> baseFogBlue;
 
   static {
-    BUILDER.push("Config for Operational Relife");
+    BUILDER.push("Config for Operation Relife");
     baseFogDensity=BUILDER.define("baseFogDensity",(float)125);
     baseFogRed=BUILDER.define("baseFogRed",(float)95);
     baseFogGreen=BUILDER.define("baseFogGreen",(float)131);

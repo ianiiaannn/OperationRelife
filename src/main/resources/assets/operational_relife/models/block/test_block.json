@@ -1,8 +1,8 @@
 {
 	"credit": "Made with Blockbench",
 	"textures": {
-		"0": "operational_relife:block/test_block",
-		"particle": "operational_relife:block/test_block"
+		"0": "operation_relife:block/test_block",
+		"particle": "operation_relife:block/test_block"
 	},
 	"elements": [
 		{

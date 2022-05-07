@@ -1,7 +1,7 @@
-package com.github.ianiiaannn.operationalrelife.handlers;
+package com.github.ianiiaannn.operationrelife.handlers;
 
-import com.github.ianiiaannn.operationalrelife.Block.Blocks;
-import com.github.ianiiaannn.operationalrelife.Item.Items;
+import com.github.ianiiaannn.operationrelife.blocks.Blocks;
+import com.github.ianiiaannn.operationrelife.items.Items;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 

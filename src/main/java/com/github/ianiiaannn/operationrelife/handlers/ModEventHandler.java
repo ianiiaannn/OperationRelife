@@ -1,4 +1,4 @@
-package com.github.ianiiaannn.operationalrelife.handlers;
+package com.github.ianiiaannn.operationrelife.handlers;
 
 
 import net.minecraftforge.eventbus.api.IEventBus;

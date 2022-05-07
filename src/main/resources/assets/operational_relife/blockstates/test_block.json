@@ -1,5 +1,5 @@
 {
   "variants": {
-    "" : {"model":"operational_relife:block/test_block"}
+    "" : {"model":"operation_relife:block/test_block"}
   }
 }

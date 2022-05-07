@@ -28,7 +28,7 @@
               0.3
             ]
           },
-          "biome": "operational_relife:test_biome"
+          "biome": "operation_relife:test_biome"
         }
       ],
       "type": "minecraft:multi_noise"

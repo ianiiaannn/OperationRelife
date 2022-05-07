@@ -1,7 +1,7 @@
-package com.github.ianiiaannn.operationalrelife.handlers;
+package com.github.ianiiaannn.operationrelife.handlers;
 
-import com.github.ianiiaannn.operationalrelife.Config;
-import com.github.ianiiaannn.operationalrelife.OperationalRelife;
+import com.github.ianiiaannn.operationrelife.Config;
+import com.github.ianiiaannn.operationrelife.OperationRelife;
 import net.minecraft.core.Registry;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
@@ -24,12 +24,12 @@ public class ForgeEventHandler {
   public static void registerEvents(){
     ForgeEventHandler.BUS.register(ForgeEventHandler.class);
     ForgeEventHandler.BUS.register(new ForgeEventHandler());
-    ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, Config.SPEC, "operational-relife.toml");
+    ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, Config.SPEC, "operation-relife.toml");
   }
   @SubscribeEvent
   public static void onChangeDimension(PlayerEvent.PlayerChangedDimensionEvent event) {
     System.out.println(event.getEntity().level.dimension());
-    if(isWorld(event.getEntity().level, OperationalRelife.TEST_DIM_KEY.location())){
+    if(isWorld(event.getEntity().level, OperationRelife.TEST_DIM_KEY.location())){
 
     }
   }
@@ -37,7 +37,7 @@ public class ForgeEventHandler {
   @SubscribeEvent
   public static void onFogDensity(EntityViewRenderEvent.FogDensity event){
     if(event.getCamera().getEntity() instanceof Player){
-      if(isWorld(event.getCamera().getEntity().level, OperationalRelife.TEST_DIM_KEY.location())){
+      if(isWorld(event.getCamera().getEntity().level, OperationRelife.TEST_DIM_KEY.location())){
         event.setDensity(density);
         event.setCanceled(true);
       }
@@ -46,7 +46,7 @@ public class ForgeEventHandler {
   @SubscribeEvent
   public static void onFogColors(EntityViewRenderEvent.FogColors event){
     if(event.getCamera().getEntity() instanceof Player){
-      if(isWorld(event.getCamera().getEntity().level, OperationalRelife.TEST_DIM_KEY.location())) {
+      if(isWorld(event.getCamera().getEntity().level, OperationRelife.TEST_DIM_KEY.location())) {
         event.setRed(red / 256);
         event.setGreen(green / 256);
         event.setBlue(blue / 256);
@@ -64,7 +64,7 @@ public class ForgeEventHandler {
   @SubscribeEvent
   public static void onJoinWorld(EntityJoinWorldEvent event){
     if (event.getEntity() instanceof Player) {
-      if(isWorld(event.getEntity().level, OperationalRelife.TEST_DIM_KEY.location())){
+      if(isWorld(event.getEntity().level, OperationRelife.TEST_DIM_KEY.location())){
         // EntityRenderers.createPlayerRenderers();
       }
     }

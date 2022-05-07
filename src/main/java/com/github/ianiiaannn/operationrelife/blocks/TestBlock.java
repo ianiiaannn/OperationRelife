@@ -1,4 +1,4 @@
-package com.github.ianiiaannn.operationalrelife.Block;
+package com.github.ianiiaannn.operationrelife.blocks;
 
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.world.level.block.Block;
