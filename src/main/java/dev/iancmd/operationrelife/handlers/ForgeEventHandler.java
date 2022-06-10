@@ -83,4 +83,5 @@ public class ForgeEventHandler {
   public static boolean isWorld(Level world, ResourceLocation loc) {
     return world.dimension() == ResourceKey.create(Registry.DIMENSION_REGISTRY, loc);
   }
+
 }

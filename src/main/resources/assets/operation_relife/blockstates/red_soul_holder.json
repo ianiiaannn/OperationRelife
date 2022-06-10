@@ -1,32 +1,32 @@
 {
   "variants": {
-    "red_soul=false,facing=east": {
+    "soul=false,facing=east": {
       "model": "operation_relife:block/red_soul_holder",
       "y": 270
     },
-    "red_soul=false,facing=north": {
+    "soul=false,facing=north": {
       "model": "operation_relife:block/red_soul_holder",
       "y": 180
     },
-    "red_soul=false,facing=south": {
+    "soul=false,facing=south": {
       "model": "operation_relife:block/red_soul_holder"
     },
-    "red_soul=false,facing=west": {
+    "soul=false,facing=west": {
       "model": "operation_relife:block/red_soul_holder",
       "y": 90
     },
-    "red_soul=true,facing=east": {
+    "soul=true,facing=east": {
       "model": "operation_relife:block/red_soul_holder_filled",
       "y": 270
     },
-    "red_soul=true,facing=north": {
+    "soul=true,facing=north": {
       "model": "operation_relife:block/red_soul_holder_filled",
       "y": 180
     },
-    "red_soul=true,facing=south": {
+    "soul=true,facing=south": {
       "model": "operation_relife:block/red_soul_holder_filled"
     },
-    "red_soul=true,facing=west": {
+    "soul=true,facing=west": {
       "model": "operation_relife:block/red_soul_holder_filled",
       "y": 90
     }

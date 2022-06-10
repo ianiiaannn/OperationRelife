@@ -19,5 +19,8 @@ public class Items {
     public static final DeferredRegister<Item> REGISTER= DeferredRegister.create(ForgeRegistries.ITEMS, OperationRelife.MODID);
 
     public static final RegistryObject<Item> TEST_BLOCK = ItemRegistry.REGISTER.register("test_block",()->new BlockItem(Blocks.BlockRegistry.TEST_BLOCK.get(),new Item.Properties().rarity(Rarity.EPIC)));
+    public static final RegistryObject<Item> RED_SOUL_HOLDER = ItemRegistry.REGISTER.register("red_soul_holder",()->new BlockItem(Blocks.BlockRegistry.RED_SOUL_HOLDER.get(),new Item.Properties().rarity(Rarity.COMMON)));
+    public static final RegistryObject<Item> BLUE_SOUL_HOLDER = ItemRegistry.REGISTER.register("blue_soul_holder",()->new BlockItem(Blocks.BlockRegistry.BLUE_SOUL_HOLDER.get(),new Item.Properties().rarity(Rarity.COMMON)));
+
   }
 }

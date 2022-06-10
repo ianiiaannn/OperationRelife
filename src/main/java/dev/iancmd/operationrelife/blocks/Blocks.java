@@ -20,6 +20,9 @@ public class Blocks {
   public static class BlockRegistry {
     public static final DeferredRegister<Block> REGISTER = DeferredRegister.create(ForgeRegistries.BLOCKS, OperationRelife.MODID);
     public static final RegistryObject<Block> TEST_BLOCK = REGISTER.register("test_block", TestBlock::new);
+    public static final RegistryObject<Block> RED_SOUL_HOLDER = REGISTER.register("red_soul_holder", RedSoulHolder::new);
+    public static final RegistryObject<Block> BLUE_SOUL_HOLDER = REGISTER.register("blue_soul_holder", BlueSoulHolder::new);
+
 
     public static final DeferredRegister<Block> OVERRIDE_REGISTER = DeferredRegister.create(ForgeRegistries.BLOCKS, "minecraft");
     public static final RegistryObject<Block> DRAGON_EGG = OVERRIDE_REGISTER.register("dragon_egg", DragonEgg::new);
