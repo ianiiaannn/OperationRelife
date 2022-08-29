@@ -6,7 +6,7 @@
     "settings": "minecraft:floating_islands",
     "biome_source": {
       "type": "minecraft:fixed",
-      "biome": "minecraft:plains"
+      "biome": "operation_relife:placeholder_biome"
     }
   }
 }
