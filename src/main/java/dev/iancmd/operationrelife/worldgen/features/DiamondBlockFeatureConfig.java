@@ -7,6 +7,8 @@ import net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvi
 
 public record DiamondBlockFeatureConfig(int size) implements FeatureConfiguration {
   public static final Codec<DiamondBlockFeatureConfig> CODEC = RecordCodecBuilder.create(instance -> {
-    return return instance.group(BlockStateProvider.CODEC.fieldOf("size").forGetter(DiamondBlockFeatureConfig::size);
+    return instance.group(
+      Codec.intRange(0, 64).fieldOf("size").forGetter(DiamondBlockFeatureConfig::size)
+    ).apply(instance, DiamondBlockFeatureConfig::new);
   });
 }

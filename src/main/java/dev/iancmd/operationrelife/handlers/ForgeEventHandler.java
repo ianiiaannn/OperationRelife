@@ -1,34 +1,34 @@
 package dev.iancmd.operationrelife.handlers;
 
-import dev.iancmd.operationrelife.OperationRelife;
-import net.minecraft.core.Registry;
-import net.minecraft.resources.ResourceKey;
+import dev.iancmd.operationrelife.init.ModItems;
+import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.Level;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.event.CreativeModeTabEvent;
 import net.minecraftforge.event.entity.player.PlayerEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
+
+import static dev.iancmd.operationrelife.core.OperationRelife.MODID;
+import static dev.iancmd.operationrelife.core.OperationRelife.getLogger;
 
 public class ForgeEventHandler {
   // private static final float red = Config.baseFogRed.get(), green = Config.baseFogGreen.get(), blue = Config.baseFogBlue.get();
   // private static final float density = Config.baseFogDensity.get();
   private static final IEventBus BUS = MinecraftForge.EVENT_BUS;
-
   public static void registerEvents() {
     ForgeEventHandler.BUS.register(ForgeEventHandler.class);
     ForgeEventHandler.BUS.register(new ForgeEventHandler());
     // ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, Config.SPEC, "operation-relife.toml");
   }
-
   @SubscribeEvent
   public static void onChangeDimension(PlayerEvent.PlayerChangedDimensionEvent event) {
     System.out.println(event.getEntity().level.dimension());
-    if (isWorld(event.getEntity().level, OperationRelife.TERMINAL_ISLE.location())) {
+    /*if (isWorld(event.getEntity().level, OperationRelife.TERMINAL_ISLE.location())) {
 
-    }
+    }*/
   }
-
   /*
     @SubscribeEvent
     public static void onFogDensityE(EntityViewRenderEvent.RenderFogEvent event) {
@@ -77,7 +77,18 @@ public class ForgeEventHandler {
   }
 */
   public static boolean isWorld(Level world, ResourceLocation loc) {
-    return world.dimension() == ResourceKey.create(Registry.DIMENSION_REGISTRY, loc);
+    return true;
+    //  world.dimension() == ResourceKey.create(Registry, loc);
   }
-
+  @SubscribeEvent
+  public void onRegisterCreativeModeTabs(CreativeModeTabEvent.Register event) {
+    getLogger().log(org.apache.logging.log4j.Level.DEBUG, "Registering creative mode tabs...");
+    event.registerCreativeModeTab(new ResourceLocation(MODID, "creative_mod_tab"), (builder) -> builder
+              .title(Component.translatable("itemGroup." + MODID + ".creative_mod_tab")).
+              icon(() -> ModItems.ItemRegistry.RED_SOUL_HOLDER.get().getDefaultInstance())
+              .displayItems((p_259897_, output, p_259072_) -> {
+                output.accept(ModItems.ItemRegistry.BLUE_SOUL_HOLDER.get());
+                output.accept(ModItems.ItemRegistry.RED_SOUL_HOLDER.get());
+              }));
+  }
 }
