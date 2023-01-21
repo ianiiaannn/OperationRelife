@@ -1,6 +1,9 @@
 package dev.iancmd.operationrelife.handlers;
 
+import dev.iancmd.operationrelife.init.ModBlocks;
 import dev.iancmd.operationrelife.init.ModItems;
+import net.minecraft.client.renderer.ItemBlockRenderTypes;
+import net.minecraft.client.renderer.RenderType;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.event.CreativeModeTabEvent;
@@ -26,6 +29,7 @@ public class ModEventHandler {
   }
   @SubscribeEvent
   public static void onClientSetup(FMLClientSetupEvent event) {
+    ItemBlockRenderTypes.setRenderLayer(ModBlocks.BlockRegistry.BLUE_SOUL_HOLDER.get(), RenderType.translucent());
   }
   @SubscribeEvent
   public void onRegisterCreativeModeTabs(CreativeModeTabEvent.Register event) {

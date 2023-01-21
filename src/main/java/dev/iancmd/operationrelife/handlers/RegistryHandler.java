@@ -1,6 +1,5 @@
 package dev.iancmd.operationrelife.handlers;
 
-import dev.iancmd.operationrelife.init.ModBiomes;
 import dev.iancmd.operationrelife.init.ModBlocks;
 import dev.iancmd.operationrelife.init.ModDimensions;
 import dev.iancmd.operationrelife.init.ModItems;
@@ -17,10 +16,6 @@ public class RegistryHandler {
     ModBlocks.getRegister().register(RegistryHandler.BUS);
     ModBlocks.getOverrideRegister().register(RegistryHandler.BUS);
     ModItems.getRegister().register(RegistryHandler.BUS);
-    // Features.getFeatureRegister().register(RegistryHandler.BUS);
-    // Features.getPlacedRegister().register(RegistryHandler.BUS);
-    ModBiomes.getRegister().register(RegistryHandler.BUS);
-    ModBiomes.registerKey();
     ModDimensions.DimensionRegistry();
     // Entities.getRegister().register(RegistryHandler.BUS);
   }

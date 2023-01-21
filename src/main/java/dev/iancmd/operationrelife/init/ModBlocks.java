@@ -4,6 +4,7 @@ import dev.iancmd.operationrelife.blocks.BlueSoulHolder;
 import dev.iancmd.operationrelife.blocks.DragonEgg;
 import dev.iancmd.operationrelife.blocks.RedSoulHolder;
 import dev.iancmd.operationrelife.blocks.TestBlock;
+import dev.iancmd.operationrelife.blocks.world.UpperSurfaceIce;
 import dev.iancmd.operationrelife.core.OperationRelife;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.registries.DeferredRegister;
@@ -23,6 +24,8 @@ public class ModBlocks {
     public static final RegistryObject<Block> TEST_BLOCK = REGISTER.register("test_block", TestBlock::new);
     public static final RegistryObject<Block> RED_SOUL_HOLDER = REGISTER.register("red_soul_holder", RedSoulHolder::new);
     public static final RegistryObject<Block> BLUE_SOUL_HOLDER = REGISTER.register("blue_soul_holder", BlueSoulHolder::new);
+    public static final RegistryObject<Block> UPPER_SURFACE_ICE = REGISTER.register("upper_surface_ice", UpperSurfaceIce::new);
+    // Override blocks
     public static final RegistryObject<Block> DRAGON_EGG = OVERRIDE_REGISTER.register("dragon_egg", DragonEgg::new);
   }
 }
