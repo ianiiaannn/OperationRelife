@@ -1,8 +1,8 @@
 plugins {
     id 'org.jetbrains.kotlin.jvm' version '1.9.0'
     id 'org.jetbrains.kotlin.plugin.serialization' version '1.9.0'
+    id 'name.remal.sonarlint' version "3.3.5"
 
-    id 'io.gitlab.arturbosch.detekt' version "${detekt_version}"
     id 'eclipse'
     id 'idea'
     id 'maven-publish'
@@ -10,6 +10,9 @@ plugins {
     id 'org.spongepowered.mixin' version '0.7.+'
     id 'org.parchmentmc.librarian.forgegradle' version '1.+'
 }
+
+check.dependsOn sonarlintMain
+publish.dependsOn check
 
 version = mod_version
 group = mod_group_id
@@ -20,7 +23,7 @@ base {
 
 java.toolchain.languageVersion = JavaLanguageVersion.of(17)
 
-jarJar.enable()
+// jarJar.enable()
 
 println "Java: ${System.getProperty 'java.version'}, JVM: ${System.getProperty 'java.vm.version'} (${System.getProperty 'java.vendor'}), Arch: ${System.getProperty 'os.arch'}"
 minecraft {
@@ -76,9 +79,6 @@ dependencies {
     minecraft "net.neoforged:forge:${minecraft_version}-${neo_version}"
 
     implementation "thedarkcolour:kotlinforforge:${kff_version}"
-
-    detektPlugins "io.gitlab.arturbosch.detekt:detekt-formatting:${detekt_version}"
-
 }
 
 
@@ -89,6 +89,7 @@ tasks.withType(ProcessResources).configureEach {
             loader_version_range: loader_version_range,
             mod_id              : mod_id, mod_name: mod_name, mod_license: mod_license, mod_version: mod_version,
             mod_authors         : mod_authors, mod_description: mod_description, pack_format_number: pack_format_number,
+            kff_version         : kff_version,
     ]
     inputs.properties replaceProperties
 
@@ -132,8 +133,4 @@ tasks.withType(JavaCompile).configureEach {
 }
 kotlin {
     jvmToolchain(17)
-}
-detekt {
-    toolVersion = detekt_version
-    config.setFrom(file("config/detekt/detekt.yml"))
 }

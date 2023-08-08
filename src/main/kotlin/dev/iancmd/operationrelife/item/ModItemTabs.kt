@@ -1,4 +1,4 @@
-package dev.iancmd.operationrelife.items
+package dev.iancmd.operationrelife.item
 
 import net.minecraft.network.chat.Component
 import net.minecraft.world.item.CreativeModeTab

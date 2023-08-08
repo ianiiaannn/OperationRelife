@@ -1,4 +1,4 @@
-package dev.iancmd.operationrelife.entities
+package dev.iancmd.operationrelife.entity
 
 /*
 import net.minecraft.world.entity.Entity;

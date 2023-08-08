@@ -4,6 +4,7 @@ import dev.iancmd.operationrelife.core.OperationRelife
 import dev.iancmd.operationrelife.init.ModBlocks.BlockRegistry
 import dev.iancmd.operationrelife.init.ModItems.ItemRegistry.REGISTER
 import net.minecraft.world.item.BlockItem
+import net.minecraft.world.item.BucketItem
 import net.minecraft.world.item.Item
 import net.minecraft.world.item.Rarity
 import net.minecraftforge.registries.DeferredRegister
@@ -40,6 +41,11 @@ object ModItems {
         BlockRegistry.UPPER_SURFACE_ICE.get(), Item.Properties().rarity(
           Rarity.COMMON
         )
+      )
+    }
+    val COLD_FLUID_BUCKET: RegistryObject<Item> = register.register<Item>("cold_fluid_bucket") {
+      BucketItem(
+        ModFluids.FluidRegistry.COLD_FLUID_SOURCE, Item.Properties()
       )
     }
   }

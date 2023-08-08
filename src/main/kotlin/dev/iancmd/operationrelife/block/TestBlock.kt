@@ -1,4 +1,4 @@
-package dev.iancmd.operationrelife.blocks
+package dev.iancmd.operationrelife.block
 
 import net.minecraft.world.level.block.Block
 

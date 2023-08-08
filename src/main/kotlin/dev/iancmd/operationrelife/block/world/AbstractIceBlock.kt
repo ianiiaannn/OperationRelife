@@ -1,4 +1,4 @@
-package dev.iancmd.operationrelife.blocks.world
+package dev.iancmd.operationrelife.block.world
 
 import net.minecraft.world.level.block.Block
 import net.minecraft.world.level.material.MapColor

@@ -1,4 +1,4 @@
-package dev.iancmd.operationrelife.blocks.world
+package dev.iancmd.operationrelife.block.world
 
 import net.minecraft.core.BlockPos
 import net.minecraft.util.RandomSource
